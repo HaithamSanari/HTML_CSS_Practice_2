@@ -1,0 +1,178 @@
+/* Start Variable */
+:root {
+  --main-color: #19c8fa;
+}
+/* End Variable */
+/* start of global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+ul,
+a {
+  font-family: 'Open Sans', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End of global rules */
+/* Start Header */
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 97px;
+}
+header .logo img {
+  height: 40px;
+}
+header .container .logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  height: 1px;
+  width: calc(100% - 30px);
+  background-color: #dad6d6;
+}
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav .toggle-menu {
+  color: white;
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  header nav .toggle-menu {
+    display: none;
+  }
+}
+header nav ul {
+  display: flex;
+}
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+  }
+  header nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    color: white;
+  }
+}
+header nav ul li a {
+  position: relative;
+  padding: 40px 15px;
+  color: black;
+  transition: 0.3s;
+  display: block;
+  font: 14px;
+  text-decoration: none;
+  color: white;
+}
+header nav ul li a:active,
+header nav ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+header .form {
+  border-left: 1px solid rgb(214, 211, 211);
+  width: 40px;
+  height: 30px;
+  padding: 20px;
+  position: relative;
+  margin-left: 20px;
+  color: white;
+}
+header .form i {
+  font-size: 17px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* End Header */
+/* Start Landing */
+.landing {
+  min-height: 100vh;
+  background-color: #1f2021;
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  position: relative;
+}
+.landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+.landing .overlay .content {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50px);
+  background-color: rgb(15 116 143 / 70%);
+}
+.landing .overlay .content .text {
+  max-width: 500px;
+}
+.landing .overlay .content .text h2 {
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.landing .overlay .content .text p {
+  font-size: 15px;
+  line-height: 2;
+}
+/* End Landing */
