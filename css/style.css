@@ -501,3 +501,505 @@ header .form i {
   }
 }
 /* End About */
+/* Start Statistics */
+.stats {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+  background-image: url(/images/pexels-mikael-blomkvist-6476589.jpg);
+  background-size: cover;
+  max-width: 100%;
+  text-align: center;
+}
+.stats::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+.stats .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.stats .box {
+  color: white;
+  padding: 50px;
+  background-color: var(--transparent-color);
+}
+@media (max-width: 767px) {
+  .stats .container .box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .stats .container .box {
+    flex-basis: 25%;
+  }
+}
+.stats .box i {
+  color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stats .box .number h2 {
+  font-weight: 800;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.stats .box .number p {
+  font-size: 14px;
+}
+/* Start Statistics */
+/* Start Our-Skills */
+.prog-skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.prog-skills .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: 991px) {
+  .prog-skills .container > div {
+    flex-basis: 45%;
+  }
+}
+
+.prog-skills .container > div > h3 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.prog-skills .container > div > p {
+  text-align: center;
+  line-height: 1.8;
+  color: #777;
+  margin-bottom: 50px;
+}
+.prog-skills .content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.prog-skills .container .content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+@media (max-width: 767px) {
+  .prog-skills .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .prog-skills .container .content img {
+    margin: 0 auto 20px;
+  }
+}
+.prog-skills .container .content .text {
+  line-height: 1.8;
+  border-bottom: 1px rgb(189, 187, 187) solid;
+}
+.prog-skills .container .content .text p {
+  text-align: right;
+  color: #777;
+  margin-bottom: 10px;
+}
+.prog-skills .container ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.prog-skills .container ul li {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #777;
+  margin-left: 10px;
+}
+.prog-skills .container ul li.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+.prog-skills .prog-holder {
+  margin-bottom: 50px;
+}
+.prog-skills .prog-holder h4 {
+  text-transform: uppercase;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.prog-skills .prog-holder .prog {
+  background-color: #dedadc;
+  height: 30px;
+}
+.prog-skills .prog-holder span {
+  background-color: var(--main-color);
+  display: block;
+  height: 100%;
+  position: relative;
+}
+.prog-skills .prog-holder span::before {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: -36px;
+  border-radius: 2px;
+  right: -18px;
+  padding: 1px 4px;
+  width: 30px;
+}
+.prog-skills .prog-holder span::after {
+  content: '';
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  border-width: 10px;
+  top: -16px;
+  right: -10px;
+}
+/* End Our-Skills */
+/* Start Quotes */
+.quote {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-size: cover;
+  background-image: url(/images/pexels-sy-donny-1841841.jpg);
+  position: relative;
+
+  text-align: center;
+  color: white;
+}
+.quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+.quote .quote-content {
+  position: relative;
+  width: 33%;
+  margin: 0 auto;
+}
+.quote .quote-content q {
+  margin-bottom: 15px;
+  display: block;
+}
+.quote .quote-content q::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f10d';
+  font-weight: 900;
+}
+.quote .quote-content q::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f10e';
+  font-weight: 900;
+}
+.quote .quote-content span {
+  font-size: 13px;
+  color: rgb(185, 181, 181);
+}
+/* End Quotes */
+/* Start Pricing */
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  text-align: center;
+}
+.pricing .plans .plan {
+  margin-bottom: 30px;
+  background-color: rgb(248, 247, 247);
+}
+
+.pricing .plans .plan .head {
+  padding: 20px;
+  border-bottom: 1px solid var(--main-color);
+  border-top: 1px solid var(--main-color);
+}
+.pricing .plans .plan h3 {
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.pricing .plans .plan span {
+  font-weight: 600;
+  font-size: 50px;
+}
+.pricing .plans .plan span::before {
+  content: '$';
+  position: relative;
+  font-size: 18px;
+  top: -30px;
+  margin-right: 10px;
+  font-weight: normal;
+}
+.pricing .plans .plan span::after {
+  content: '/Mo';
+  position: relative;
+  font-size: 18px;
+  top: 0px;
+  margin-left: 10px;
+  font-weight: normal;
+}
+.pricing .plans ul {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans ul li {
+  padding: 20px;
+  font-size: 15px;
+  position: relative;
+}
+.pricing .plans ul li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid var(--main-color);
+  width: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.pricing .plans .foot {
+  margin: 50px;
+}
+.pricing .plans .foot a {
+  border: 1px solid var(--main-color);
+  padding: 10px 20px;
+}
+.pricing .contact-text {
+  text-align: center;
+  margin: 30px auto 20px;
+}
+.pricing .contact-link {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+/* End Pricing */
+/* Start Subscription */
+.subscribe {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url(/images/pexels-sy-donny-1841841.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+.subscribe::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+.subscribe .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
+.subscribe form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+}
+.subscribe form i {
+  position: absolute;
+  left: 30px;
+}
+.subscribe form input[type='email'] {
+  border: 1px solid white;
+  border-right: none;
+  background: none;
+  padding: 20px 20px 20px 60px;
+  caret-color: var(--main-color);
+  width: calc(100% - 130px);
+}
+.subscribe form input[type='submit'] {
+  width: 130px;
+  border-left: none;
+  padding: 20px 30px;
+  background-color: var(--main-color);
+  color: white;
+  border: 1px solid white;
+  text-transform: uppercase;
+}
+.subscribe form input[type='email']:focus,
+.subscribe form input[type='submit']:focus {
+  outline: none;
+  color: white;
+}
+.subscribe form ::placeholder {
+  color: white;
+}
+.subscribe p {
+  line-height: 2;
+  margin-left: 50px;
+}
+@media (max-width: 992px) {
+  .subscribe p {
+    margin: 20px 0 0 0;
+  }
+}
+/* End Subscription */
+/* Start Contact */
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .contact .content {
+    flex-direction: column;
+  }
+}
+.contact .content form {
+  flex-basis: 70%;
+}
+.contact .content form .main-input {
+  display: block;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 20px;
+}
+.contact .content form textarea.main-input {
+  height: 200px;
+}
+.contact .content form input[type='submit'] {
+  display: flex;
+  margin-left: auto;
+  padding: 15px 20px;
+  background-color: var(--main-color);
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.contact .content .info {
+  flex-basis: 25%;
+}
+@media (max-width: 768px) {
+  .contact .content .info {
+    order: -1;
+    text-align: center;
+  }
+}
+.contact .content .info h4 {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.contact .content .info h4:last-of-type {
+  margin-top: 110px;
+}
+@media (max-width: 768px) {
+  .contact .content .info h4:last-of-type {
+    margin-top: 30px;
+  }
+}
+.contact .content .info .phone {
+  display: block;
+  margin-bottom: 10px;
+  color: #777;
+}
+.contact .content .info address {
+  line-height: 2;
+  color: #777;
+}
+/* End Contact */
+/* Start Footer */
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: url(/images/pexels-rrinna-2071558.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+.footer .container {
+  position: relative;
+  text-align: center;
+}
+.footer .container img {
+  height: 50px;
+  position: relative;
+}
+.footer .container p:first-of-type {
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+.footer .container p:first-of-type::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 15%;
+  bottom: -15px;
+  left: 50%;
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+.footer .container .social-icons i {
+  padding: 10px 15px;
+  margin-bottom: 50px;
+}
+.footer .container .copyright span{
+  color: var(--main-color);
+  font-weight: bold;
+}
+/* End Footer */
